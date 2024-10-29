@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lily's Logic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href=media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <style>
         /* Basic styling for the entire document */
         body {
@@ -16,8 +22,10 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #efe9e4; /* Very light pink background */
+            background-color: #efe9e4;
+            /* Very light pink background */
         }
+
         /* Container settings */
         .container {
             width: 85%;
@@ -25,6 +33,7 @@
             margin: 0 auto;
             text-align: left;
         }
+
         /* Hero section styling */
         .hero {
             background-color: #ee90d8;
@@ -33,20 +42,24 @@
             width: 100%;
             text-align: center;
         }
+
         .hero img {
             border-radius: 50%;
             margin-top: 10px;
             height: 8rem;
         }
+
         .hero h1 {
             font-size: 2.5rem;
             margin-top: -1px;
             margin-bottom: -15px;
         }
+
         .hero .tagline {
             font-size: 1.2rem;
             color: rgb(37, 37, 37);
         }
+
         /* Section styling */
         .section {
             border-radius: 10px;
@@ -54,11 +67,12 @@
         }
 
         .flex-container {
-            display:flex;
+            display: flex;
             flex-direction: row;
+            justify-content: space-between;
         }
-        
-        .flex-container > div {
+
+        .flex-container>div {
             margin: 10px;
             padding: 20px;
         }
@@ -70,13 +84,16 @@
             justify-content: center;
             align-items: center;
         }
+
         .logos img {
             width: 80px;
             height: auto;
         }
+
         .logo-entry {
             text-align: center;
         }
+
         /* Footer styling */
         footer {
             background-color: #333;
@@ -85,6 +102,7 @@
             margin-top: 40px;
             text-align: center;
         }
+
         .button {
             border: none;
             color: white;
@@ -96,7 +114,7 @@
             margin: 4px 2px;
             cursor: pointer;
             background-color: #fa8fdcc4;
-        } 
+        }
 
 
         /* Mobile Styles */
@@ -106,53 +124,64 @@
                 align-items: center;
             }
         }
+
         /* Responsive layout - makes a one column-layout instead of two-column layout */
         @media (max-width: 900px) {
-        .flex-container {
-            flex-direction: column-reverse;
-        }
+            .flex-container {
+                flex-direction: column-reverse;
+            }
         }
 
         /* The Modal (background) */
         .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
         }
 
         /* Modal Content */
         .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
         }
 
         /* The Close Button */
         .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
         }
 
         .close:hover,
         .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <!-- Hero section with logo and name -->
     <div class="hero">
@@ -166,12 +195,15 @@
             <div class="flex-container" style="align-items: center;
   justify-content: center;">
                 <div>
-                    <img src="media/lily.png" alt="Lily Photo" style="height: 8rem;border-radius: 50%;" >
+                    <img src="media/lily.png" alt="Lily Photo" style="height: 8rem;border-radius: 50%;">
                 </div>
                 <div>
                     <br>
-                    <p>Currently based in Madrid, Spain. I am a student-centered, ed-tech and learning design consultant. I specialize in global education and language learning, helping organizations navigate the educational landscape.</p>
-                    <p>In my site, you'll find my experience and expertise in global education and language learning, helping organizations navigate the educational landscape.</p>
+                    <p>Currently based in Madrid, Spain. I am a student-centered, ed-tech and learning design
+                        consultant. I specialize in global education and language learning, helping organizations
+                        navigate the educational landscape.</p>
+                    <p>In my site, you'll find my experience and expertise in global education and language learning,
+                        helping organizations navigate the educational landscape.</p>
                     <p>Thanks and see you soon!</p>
                 </div>
             </div>
@@ -181,42 +213,67 @@
         <div class="section">
             <h2>Expertise</h2>
             <div class="flex-container">
-                <div style="background-color: rgb(247, 247, 227); border-radius: 5%;">
+                <div
+                    style="background-color: rgb(247, 247, 227); border-radius: 5%; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
                     <h3>Learning App Design</h3>
-                    <p>Are you launching an EdTech startup? I bring an educator's perspective to help make your app more adaptable to educational needs.</p>
+                    <p>Are you launching an EdTech startup? I bring an educator's perspective to help make your app more
+                        adaptable to educational needs.</p>
                     <br>
-                    <!-- Trigger/Open The Modal -->
-                <button id="myBtn">My wins</button>
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>
-                            ✼ Redesigned app interfaces to enhance usability for both students and educators, creating an intuitive and engaging user experience.<br><br>
-                            ✼ Conducted data-driven research to identify essential features that drive app success, optimizing functionality to meet educational needs and boost engagement.
-    
-                        </p>
+                    <button data-modal-target="#myModal1">My wins</button>
+                    <div id="myModal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" data-close-button>&times;</span>
+                            <p>
+                                ✼ Redesigned app interfaces to enhance usability for both students and educators,
+                                creating an intuitive and engaging user experience.<br><br>
+                                ✼ Conducted data-driven research to identify essential features that drive app success,
+                                optimizing functionality to meet educational needs and boost engagement.
+
+                            </p>
+                        </div>
                     </div>
                 </div>
-                </div>
-                <div style="background-color: lightgoldenrodyellow; border-radius: 5%;">
+                <div
+                    style="background-color: rgb(247, 247, 227); border-radius: 5%; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
                     <h3>Global Curriculum</h3>
-                    <p>My specialty is focusing on where standards overlap, ensuring your curriculum covers multiple learning goals across regions.</p>
+                    <p>My specialty is focusing on where standards overlap, ensuring your curriculum covers multiple
+                        learning goals across regions.</p>
                     <br>
-                    <p><b>My wins:</b><br>
-                        ✼ Developed globally adaptable curricula by identifying and leveraging overlapping standards, ensuring broad relevance and accessibility for diverse educational systems.<br><br>
-                        ✼ Prioritized alignment with multiple learning standards to create flexible curricula that support a wide range of academic goals, catering to international students and educators.
-                    </p>
+                    <button data-modal-target="#myModal2" style="align-self: bottom;">My wins </button>
+                    <div id="myModal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" data-close-button>&times;</span>
+                            <p>
+                                ✼ Developed globally adaptable curricula by identifying and leveraging overlapping
+                                standards, ensuring broad relevance and accessibility for diverse educational
+                                systems.<br><br>
+                                ✼ Prioritized alignment with multiple learning standards to create flexible curricula
+                                that support a wide range of academic goals, catering to international students and
+                                educators.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div style="background-color: lightgoldenrodyellow; border-radius: 5%;">
+                <div
+                    style="background-color: rgb(247, 247, 227); border-radius: 5%; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;">
                     <h3>Language Learning</h3>
-                    <p>I use game-based, student-centered activities to keep learners excited and motivated in their language goals.</p>
+                    <p>I use game-based, student-centered activities to keep learners excited and motivated in their
+                        language goals.</p>
                     <br>
-                    <p><b>My wins:</b><br>
-                        ✼ Designed targeted language learning methods and activities that enhance student engagement and maximize retention through interactive, real-world applications.<br><br>
-                        ✼ Specialized in crafting immersive language experiences, utilizing best practices to foster active learning, cultural understanding, and sustained language proficiency.
-                    </p>
+                    <button data-modal-target="#myModal3">My wins</button>
+                    <div id="myModal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" data-close-button>&times;</span>
+                            <p>
+                                ✼ Designed targeted language learning methods and activities that enhance student
+                                engagement and
+                                maximize retention through interactive, real-world applications.<br><br>
+                                ✼ Specialized in crafting immersive language experiences, utilizing best practices to
+                                foster
+                                active learning, cultural understanding, and sustained language proficiency.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,26 +281,27 @@
         <!-- Education background section -->
         <div class="section">
             <h2>Experience</h2>
-            <div class="flex-container" style="align-items: center;
-  justify-content: center;">
-                <div>
-                    <p style="text-align: center; font-size: 100%;">
-                        <b>Masters in Education</b><br>
-                        🇺🇸 Western Governors University<br><br>
-                        <b>B.S Education | B.A Spanish</b><br>
-                        🇺🇸 California Polytechnic University<br><br>
-                        <b>Expert in TEFL</b><br>
-                        🇪🇸 Universitat Internacional de Catalunya<br>
+            <div class="flex-container" style="align-items: center; justify-content: center;">
+                <div style="background-color: rgb(244, 255, 235); border-radius: 5%; text-align: center;">
+                    <h3>Education</h3>
+                    <p>
+                        <span style="font-weight: 500;">Masters in Education</span><br>
+                        <span style="font-weight:200;">🇺🇸 Western Governors University</span><br><br>
+                        <span style="font-weight: 500;">B.S Education | B.A Spanish</span><br>
+                        <span style="font-weight:200;">🇺🇸 California Polytechnic University</span><br><br>
+                        <span style="font-weight: 500;">Expert in TEFL</span><br>
+                        <span style="font-weight:200;">🇪🇸 Universitat Internacional de Catalunya</span>
                     </p>
                 </div>
-                <div>
-                    <p style="text-align: center; font-size: 100%;">
-                        <b>H5P</b><br>
-                        🎓 Interactive content creation<br><br>
-                        <b>TeacherWriteUp Pro</b><br>
-                        📝 Student record tracking<br><br>
-                        <b>SCORN Framework</b><br>
-                        🛠️ Multiplatform e-learing environemnt<br>
+                <div style="background-color: rgb(244, 255, 235); border-radius: 5%; text-align: center;">
+                    <h3>Projects</h3>
+                    <p>
+                        <span style="font-weight: 500;">H5P</span><br>
+                        <span style="font-weight: 200;">🎓 Interactive content creation</span><br><br>
+                        <span style="font-weight: 500;">Articulate</span><br>
+                        <span style="font-weight: 200;">📝 Course Creation LMS</span><br><br>
+                        <span style="font-weight: 500;">SCORN Framework</span><br>
+                        <span style="font-weight: 200;">🛠️ Multiplatform e-learing environemnt</span><br>
                     </p>
                 </div>
             </div>
@@ -254,23 +312,29 @@
             <h2>I've worked with</h2>
             <div class="flex-container logos">
                 <div class="logo-entry">
-                    <a target="_blank" href="https://www.unhcr.org/cgi-bin/texis/vtx/home"><img src="media/unhcr.png" alt="UNHCR"></a>
+                    <a target="_blank" href="https://www.unhcr.org/cgi-bin/texis/vtx/home"><img src="media/unhcr.png"
+                            alt="UNHCR"></a>
 
                 </div>
                 <div class="logo-entry">
-                    <a target="_blank" href="https://www.sproutup.org/our-story"><img src="media/sproutup.png" style="filter: invert(1);" alt="Sprout Up"></a>
+                    <a target="_blank" href="https://www.sproutup.org/our-story"><img src="media/sproutup.png"
+                            style="filter: invert(1);" alt="Sprout Up"></a>
                 </div>
                 <div class="logo-entry">
                     <a target="_blank" href="https://www.learningenterprises.org/"><img src="media/le.png" alt="LE"></a>
                 </div>
                 <div class="logo-entry">
-                    <a target="_blank" href="https://www.touchableearth.org/"><img src="media/te.png" alt="Touchable Earth"></a>
+                    <a target="_blank" href="https://www.touchableearth.org/"><img src="media/te.png"
+                            alt="Touchable Earth"></a>
                 </div>
                 <div class="logo-entry">
-                    <a target="_blank" href="https://liberalstudies.calpoly.edu/"><img src="media/calpoly.png" alt="CalPoly" style="height: 20%;"></a>
+                    <a target="_blank" href="https://liberalstudies.calpoly.edu/"><img src="media/calpoly.png"
+                            alt="CalPoly" style="height: 20%;"></a>
                 </div>
                 <div class="logo-entry">
-                    <a target="_blank" href="https://www.educacionfpydeportes.gob.es/eeuu/convocatorias-programas/convocatorias-eeuu/nalcap.html"><img src="media/spaingov.png" alt="Govt Spain"></a>
+                    <a target="_blank"
+                        href="https://www.educacionfpydeportes.gob.es/eeuu/convocatorias-programas/convocatorias-eeuu/nalcap.html"><img
+                            src="media/spaingov.png" alt="Govt Spain"></a>
                 </div>
                 <div class="logo-entry">
                     <a target="_blank" href="https://meddeas.com/es/"><img src="media/meddeas.png" alt="Meddeas"></a>
@@ -287,11 +351,12 @@
         </div>
 
         <!-- How I normally work -->
-        
+
         <div class="section">
-            <br><br><h2>Let's work together</h2>
+            <br><br>
+            <h2>Let's work together</h2>
             <p>
-                1.  Let me know what you are looking for<br>
+                1. Book a call and tell me about your project.<br>
                 2. I’ll produce an MVP of the content and timeframe free of charge.<br>
                 3. When our goals align, we can move forward together.<br>
             </p>
@@ -299,7 +364,7 @@
 
         <!-- Let's Chat section -->
         <div class="section chat-section">
-    
+
             <a class="button" href="https://cal.com/lilys-logic/30min" target=”_blank”s>Book a call</a>
             <p>or reach me at <i>lilyslogicconsulting@gmail.com</i></p>
         </div>
@@ -311,31 +376,31 @@
         </div>
     </footer>
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
+        // Open modal based on data attribute
+        document.querySelectorAll("[data-modal-target]").forEach(button => {
+            button.addEventListener("click", () => {
+                const modal = document.querySelector(button.dataset.modalTarget);
+                modal.style.display = "flex";
+                modal.style.justifyContent = "center";
+                modal.style.alignItems = "center";
+                modal.style.textAlign = "left";
+            });
+        });
+
+        // Close modal based on close button
+        document.querySelectorAll("[data-close-button]").forEach(button => {
+            button.addEventListener("click", () => {
+                button.closest(".modal").style.display = "none";
+            });
+        });
+
+        // Close modal when clicking outside of the modal content
+        window.onclick = function (event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.style.display = "none";
+            }
         }
     </script>
 </body>
+
 </html>
