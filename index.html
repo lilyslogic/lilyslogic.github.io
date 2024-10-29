@@ -11,7 +11,8 @@
         /* Basic styling for the entire document */
         body {
             font-family: "DM Sans", sans-serif;
-            font-size: 150%;
+            font-size: 110%;
+
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,37 +20,35 @@
         }
         /* Container settings */
         .container {
-            width: 80%;
-            max-width: 900px;
+            width: 85%;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: left;
         }
         /* Hero section styling */
         .hero {
             background-color: #ee90d8;
-            padding: 40px 0;
+            padding: 0px 0;
             border-bottom: 2px solid #ffccf2;
             width: 100%;
             text-align: center;
         }
         .hero img {
             border-radius: 50%;
+            margin-top: 10px;
             height: 8rem;
         }
         .hero h1 {
-            font-size: 3em;
-            margin: 20px 0 10px;
+            font-size: 2.5rem;
+            margin-top: -1px;
+            margin-bottom: -15px;
         }
         .hero .tagline {
-            font-size: 1.5em;
+            font-size: 1.2rem;
             color: rgb(37, 37, 37);
-            margin-bottom: 30px;
         }
         /* Section styling */
         .section {
-            margin: 10px 0;
-            padding: 20px 0;
-            padding: 30px;
             border-radius: 10px;
             text-align: left;
         }
@@ -69,17 +68,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 20px 0;
-            gap: 20px;
             align-items: center;
         }
         .logos img {
-            width: 100px;
+            width: 80px;
             height: auto;
         }
         .logo-entry {
             text-align: center;
-            width: 120px;
         }
         /* Footer styling */
         footer {
@@ -89,6 +85,20 @@
             margin-top: 40px;
             text-align: center;
         }
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: #fa8fdcc4;
+        } 
+
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             .logos {
@@ -99,8 +109,47 @@
         /* Responsive layout - makes a one column-layout instead of two-column layout */
         @media (max-width: 900px) {
         .flex-container {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
+        }
+
+        /* The Modal (background) */
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
         }
     </style>
 </head>
@@ -114,28 +163,42 @@
     <div class="container">
         <!-- Intro section -->
         <div class="section">
-            <h2>Intro</h2>
-            <p>Hi! I'm Lily,</p>
-            <p>Currently based in Madrid, Spain. I am a student-centered, ed-tech and learning design consultant. I specialize in global education and language learning, helping organizations navigate the educational landscape.</p>
-            <p>In my site, you'll find my experience and expertise in global education and language learning, helping organizations navigate the educational landscape.</p>
-            <p>Thanks and see you soon!</p>
-            <br>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Steve_Jobs_signature.svg" alt="Lily's Logic logo">
+            <div class="flex-container" style="align-items: center;
+  justify-content: center;">
+                <div>
+                    <img src="media/lily.png" alt="Lily Photo" style="height: 8rem;border-radius: 50%;" >
+                </div>
+                <div>
+                    <br>
+                    <p>Currently based in Madrid, Spain. I am a student-centered, ed-tech and learning design consultant. I specialize in global education and language learning, helping organizations navigate the educational landscape.</p>
+                    <p>In my site, you'll find my experience and expertise in global education and language learning, helping organizations navigate the educational landscape.</p>
+                    <p>Thanks and see you soon!</p>
+                </div>
+            </div>
         </div>
 
         <!-- Expertise section -->
         <div class="section">
-            <h2>My Expertise...</h2>
+            <h2>Expertise</h2>
             <div class="flex-container">
-                <div style="background-color: lightgoldenrodyellow; border-radius: 5%;">
+                <div style="background-color: rgb(247, 247, 227); border-radius: 5%;">
                     <h3>Learning App Design</h3>
                     <p>Are you launching an EdTech startup? I bring an educator's perspective to help make your app more adaptable to educational needs.</p>
                     <br>
-                    <p><b>My wins:</b><br>
-                        ✼ Redesigned app interfaces to enhance usability for both students and educators, creating an intuitive and engaging user experience.<br><br>
-                        ✼ Conducted data-driven research to identify essential features that drive app success, optimizing functionality to meet educational needs and boost engagement.
-
-                    </p>
+                    <!-- Trigger/Open The Modal -->
+                <button id="myBtn">My wins</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>
+                            ✼ Redesigned app interfaces to enhance usability for both students and educators, creating an intuitive and engaging user experience.<br><br>
+                            ✼ Conducted data-driven research to identify essential features that drive app success, optimizing functionality to meet educational needs and boost engagement.
+    
+                        </p>
+                    </div>
+                </div>
                 </div>
                 <div style="background-color: lightgoldenrodyellow; border-radius: 5%;">
                     <h3>Global Curriculum</h3>
@@ -160,12 +223,30 @@
 
         <!-- Education background section -->
         <div class="section">
-            <h2>I've learned from</h2>
-            <p>
-                🇺🇸 Western Governors University (Masters in Education) <br>
-                🇺🇸 California Polytechnic University (B.S Education, B.A Spanish) <br>
-                🇪🇸 Universitat Internacional de Catalunya (Expert in TEFL) <br>
-            </p>
+            <h2>Experience</h2>
+            <div class="flex-container" style="align-items: center;
+  justify-content: center;">
+                <div>
+                    <p style="text-align: center; font-size: 100%;">
+                        <b>Masters in Education</b><br>
+                        🇺🇸 Western Governors University<br><br>
+                        <b>B.S Education | B.A Spanish</b><br>
+                        🇺🇸 California Polytechnic University<br><br>
+                        <b>Expert in TEFL</b><br>
+                        🇪🇸 Universitat Internacional de Catalunya<br>
+                    </p>
+                </div>
+                <div>
+                    <p style="text-align: center; font-size: 100%;">
+                        <b>H5P</b><br>
+                        🎓 Interactive content creation<br><br>
+                        <b>TeacherWriteUp Pro</b><br>
+                        📝 Student record tracking<br><br>
+                        <b>SCORN Framework</b><br>
+                        🛠️ Multiplatform e-learing environemnt<br>
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- Logos of places Lily has worked with -->
@@ -173,25 +254,26 @@
             <h2>I've worked with</h2>
             <div class="flex-container logos">
                 <div class="logo-entry">
-                    <img src="media/unhcr.png" alt="UNHCR">
+                    <a target="_blank" href="https://www.unhcr.org/cgi-bin/texis/vtx/home"><img src="media/unhcr.png" alt="UNHCR"></a>
+
                 </div>
                 <div class="logo-entry">
-                    <img src="media/sproutup.png" style="filter: invert(1);" alt="Sprout Up">
+                    <a target="_blank" href="https://www.sproutup.org/our-story"><img src="media/sproutup.png" style="filter: invert(1);" alt="Sprout Up"></a>
                 </div>
                 <div class="logo-entry">
-                    <img src="media/le.png" alt="LE">
+                    <a target="_blank" href="https://www.learningenterprises.org/"><img src="media/le.png" alt="LE"></a>
                 </div>
                 <div class="logo-entry">
-                    <img src="media/te.png" alt="Touchable Earth">
+                    <a target="_blank" href="https://www.touchableearth.org/"><img src="media/te.png" alt="Touchable Earth"></a>
                 </div>
                 <div class="logo-entry">
-                    <img src="media/calpoly.png" alt="CalPoly" style="height: 20%;">
+                    <a target="_blank" href="https://liberalstudies.calpoly.edu/"><img src="media/calpoly.png" alt="CalPoly" style="height: 20%;"></a>
                 </div>
                 <div class="logo-entry">
-                    <img src="media/spaingov.png" alt="Govt Spain">
+                    <a target="_blank" href="https://www.educacionfpydeportes.gob.es/eeuu/convocatorias-programas/convocatorias-eeuu/nalcap.html"><img src="media/spaingov.png" alt="Govt Spain"></a>
                 </div>
                 <div class="logo-entry">
-                    <img src="media/meddeas.png" alt="Meddeas">
+                    <a target="_blank" href="https://meddeas.com/es/"><img src="media/meddeas.png" alt="Meddeas"></a>
                 </div>
             </div>
         </div>
@@ -205,8 +287,9 @@
         </div>
 
         <!-- How I normally work -->
+        
         <div class="section">
-            <h2>How Can We Get Started Together?</h2>
+            <br><br><h2>Let's work together</h2>
             <p>
                 1.  Let me know what you are looking for<br>
                 2. I’ll produce an MVP of the content and timeframe free of charge.<br>
@@ -216,8 +299,9 @@
 
         <!-- Let's Chat section -->
         <div class="section chat-section">
-            <h2>Let's Chat</h2>
-            <p><b>Contact Lily at:</b><br>lilyslogicconsulting@gmail.com</p>
+    
+            <a class="button" href="https://cal.com/lilys-logic/30min" target=”_blank”s>Book a call</a>
+            <p>or reach me at <i>lilyslogicconsulting@gmail.com</i></p>
         </div>
     </div>
     <footer>
@@ -226,5 +310,32 @@
             <p>&copy; 2024 Lily's Logic. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
 </body>
 </html>
